@@ -51,6 +51,10 @@ readr::write_lines(htmlhead, path = "header.html")
 
 
 
+# Try it out
+
+**Attribution**
+
 
 The materials in this repository provide the structure needed to incorporate code folding in an Rbookdown.  Proper attribution:
 
@@ -61,6 +65,17 @@ The materials in this repository provide the structure needed to incorporate cod
 
 
 
+\
+\
+\
+\
+
+
+
+
+**Final product**
+
+You can check out the final result [here](https://ajohns24.github.io/bookdown_codefolding/).
 
 
 \
@@ -72,7 +87,7 @@ The materials in this repository provide the structure needed to incorporate cod
 
 
 
-Let's try it!
+**Let's try it!**
 
 
 \
