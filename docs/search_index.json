@@ -1,5 +1,4 @@
 [
 ["index.html", "Code folding! 1 Attribution", " Code folding! Alicia A. Johnson 1 Attribution The materials in this repository provide the structure needed to incorporate code folding in an Rbookdown. Proper attribution: footer.html from shilad overall workflow inspired by this stackoverflow post collapse.js &amp; transition.js files: Copyright 2011-2016 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) "],
-["final-product.html", " 2 Final product", " 2 Final product You can check out the final result here. "],
-["lets-try-it.html", " 3 Let’s try it!", " 3 Let’s try it! Question: Have you been hearing all of the news about corduroy pillows? Answer: They’re making head lines! Question: How was this plot made? Answer: sim_data &lt;- data.frame(x = rnorm(100)) sim_data$y &lt;- rnorm(100, mean = sim_data$x + 1) plot(y ~ x, sim_data) "]
+["lets-try-it.html", " 2 Let’s try it!", " 2 Let’s try it! Question: Have you been hearing all of the news about corduroy pillows? Answer: They’re making head lines! Question: How was this plot made? Answer: sim_data &lt;- data.frame(x = rnorm(100)) sim_data$y &lt;- rnorm(100, mean = sim_data$x + 1) plot(y ~ x, sim_data) "]
 ]

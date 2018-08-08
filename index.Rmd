@@ -71,18 +71,6 @@ The materials in this repository provide the structure needed to incorporate cod
 
 
 
-# Final product
-
-You can check out the final result [here](https://ajohns24.github.io/bookdown_codefolding/).
-
-
-\
-\
-\
-\
-
-
-
 
 
 # Let's try it!
