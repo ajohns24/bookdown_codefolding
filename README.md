@@ -5,4 +5,4 @@ This repository contains all files you need to incorporate code folding in a boo
 Copyright 2011-2016 Twitter, Inc.
 Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
-The materials herein produce a bookdown that looks like [this](https://ajohns24.github.io/bookdown_codefolding)
+The materials herein produce a bookdown that looks like [this](https://ajohns24.github.io/bookdown_codefolding)!
