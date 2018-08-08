@@ -1,0 +1,71 @@
+<script >
+// From Shilad Sen. shilad on github 
+function initSolutions() {
+  
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+  
+  // index for unique code element ids
+  var currentIndex = 1;
+  
+  // select all R code blocks
+  var rCodeBlocks = $('div.solution');
+  rCodeBlocks.each(function() {
+  
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+  
+    // add a show code button right above
+    var showCodeText = $('<span> show </span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', false)
+        .attr('aria-controls', id);
+ 
+    var buttonRow = $('<div class="row"></div>'); 
+    var buttonCol = $('<div class="col-md-10"></div>');
+  
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+  
+    div.before(buttonRow);
+  
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('show');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('hide');
+    });
+  });
+}
+initSolutions();
+  //$(".code-folding-btn").not('div.solution .code-folding-btn').parent().hide();
+  
+  
+// From https://stackoverflow.com/questions/37755037/how-to-add-code-folding-to-output-chunks-in-rmarkdown-html-documents  
+$(".toggle").click(function() {
+$(this).toggleClass("open");
+});
+
+</script>
+
+
+
+

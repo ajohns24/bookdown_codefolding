@@ -1,0 +1,147 @@
+--- 
+title: "Code folding!"
+author: Alicia A. Johnson
+documentclass: book
+output: 
+  bookdown::gitbook:
+    includes:
+      in_header: header.html
+      after_body: footer.html
+---
+
+
+```{r htmlTemp3, echo=FALSE, eval=TRUE}
+# Keep this chunk to use code folding
+codejs       <- readr::read_lines("js/codefolding.js")
+collapsejs   <- readr::read_lines("js/collapse.js")
+transitionjs <- readr::read_lines("js/transition.js")
+
+# Create header.html
+htmlhead <- 
+  paste('
+<script>',
+paste(transitionjs, collapse = "\n"),
+'</script>
+<script>',
+paste(collapsejs, collapse = "\n"),
+'</script>
+<script>',
+paste(codejs, collapse = "\n"),
+'</script>
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+.row { display: flex; }
+.collapse { display: none; }
+.in { display:block }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+', sep = "\n")
+
+readr::write_lines(htmlhead, path = "header.html")
+```
+
+
+
+\
+\
+
+
+
+
+The materials in this repository provide the structure needed to incorporate code folding in an Rbookdown.  Proper attribution:
+
+- footer.html from [shilad](https://github.com/shilad)    
+- overall workflow inspired by this [stackoverflow post](https://stackoverflow.com/questions/45360998/code-folding-in-bookdown/45501553)    
+
+- collapse.js & transition.js files: Copyright 2011-2016 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+
+
+
+
+\
+\
+\
+\
+
+
+
+
+
+Let's try it!
+
+
+\
+
+
+**Question:**  Have you been hearing all of the news about corduroy pillows?    
+
+\
+
+**Answer:**    
+
+<div class = "solution">  
+They're making *head lines*!
+</div>
+
+
+
+\
+\
+\
+\
+
+
+
+**Question:**  How was this plot made?    
+
+```{r echo = FALSE}
+sim_data <- data.frame(x = rnorm(100))
+sim_data$y <- rnorm(100, mean = sim_data$x + 1)
+plot(y ~ x, sim_data)
+```
+
+
+\
+
+
+
+
+**Answer:**    
+
+<div class = "solution">  
+```{r eval = FALSE}
+sim_data <- data.frame(x = rnorm(100))
+sim_data$y <- rnorm(100, mean = sim_data$x + 1)
+plot(y ~ x, sim_data)
+```
+</div>
+
+
+
+
+
+ 
+\
+\
+\
+\
+
+
+
+
+\
+\
+\
+\
+\
+\
+
+
+
+
+
