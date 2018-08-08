@@ -10,7 +10,7 @@ output:
 ---
 
 
-```{r htmlTemp3, echo=FALSE, eval=TRUE}
+```{r htmlTemp, echo=FALSE, eval=TRUE}
 # Keep this chunk to use code folding
 codejs       <- readr::read_lines("js/codefolding.js")
 collapsejs   <- readr::read_lines("js/collapse.js")
@@ -51,6 +51,8 @@ readr::write_lines(htmlhead, path = "header.html")
 
 
 
+
+
 # Attribution
 
 
@@ -67,6 +69,24 @@ The materials in this repository provide the structure needed to incorporate cod
 \
 \
 \
+
+
+
+
+
+# General directions
+
+- Be sure to start with the provided index.Rmd.  It has an important `htmlTemp` code chunk at the top.    
+
+- Copy the js folder and footer.html.  These are required for the code folding.
+
+
+\
+\
+\
+\
+
+
 
 
 
